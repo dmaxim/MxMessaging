@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  buildImage:
+  build:
     machine: true     
    
     steps:
