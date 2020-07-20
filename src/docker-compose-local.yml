@@ -1,0 +1,8 @@
+﻿version: '3.5'
+
+services: 
+  expensetrack.database:
+    image:  dmaxim/messageapi:v1.0
+    container_name: mxinfo.message.api
+    ports:
+      - "5500:80"
