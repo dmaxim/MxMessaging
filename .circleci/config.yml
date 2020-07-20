@@ -10,4 +10,4 @@ jobs:
 
       - run: docker build -t dmaxim/messageapi:v1.0 -f src/circle-Dockerfile .
 
-      - run: docker push dmaxim/messagepi:v1.0
+      - run: docker push dmaxim/messageapi:v1.0
