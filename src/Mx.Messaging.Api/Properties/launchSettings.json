@@ -20,7 +20,7 @@
     "Mx.Messaging.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "events",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
