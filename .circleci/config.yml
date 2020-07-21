@@ -8,6 +8,6 @@ jobs:
       - checkout
       - run: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 
-      - run: docker build -t dmaxim/messageapi:v1.0 -f src/circle-Dockerfile .
+      - run: docker build -t dmaxim/messageapi:v1.1 -f src/circle-Dockerfile .
 
-      - run: docker push dmaxim/messageapi:v1.0
+      - run: docker push dmaxim/messageapi:v1.1
