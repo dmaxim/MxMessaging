@@ -2,7 +2,7 @@
 
 services: 
   expensetrack.database:
-    image:  dmaxim/messageapi:v1.0
+    image:  dmaxim/messageapi:v1.2
     container_name: mxinfo.message.api
     ports:
       - "5500:80"

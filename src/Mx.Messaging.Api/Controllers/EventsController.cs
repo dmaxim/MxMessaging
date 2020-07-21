@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Mx.Messaging.Models.Events;
+using Newtonsoft.Json;
 
 namespace Mx.Messaging.Api.Controllers
 {
@@ -21,6 +23,7 @@ namespace Mx.Messaging.Api.Controllers
         public IActionResult Publish(ApplicationEvent eventModel)
         {
             LogHeaders();
+            LogRequest(eventModel);
             return Ok("Received Event");
         }
 
@@ -35,6 +38,14 @@ namespace Mx.Messaging.Api.Controllers
                 }
                
             }
+
+        }
+
+        private void LogRequest(ApplicationEvent eventModel)
+        {
+            _logger.LogInformation("******* Request Received ****");
+            _logger.LogInformation(JsonConvert.SerializeObject(eventModel));
+            _logger.LogInformation("***** End of Request ******");
 
         }
     }
